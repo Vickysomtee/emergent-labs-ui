@@ -399,7 +399,7 @@ main {
       .notice {
         display: grid;
         position: relative;
-        left: 60px;
+        left: 55px;
         top: 300px;
         width: 450px;
         font-size: 15px;
