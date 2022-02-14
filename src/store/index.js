@@ -36,7 +36,7 @@ export default createStore({
   },
   actions: {
     async addEmployee({ commit }, payload) {
-      const response = await fetch("http://localhost:5000/api/v1/employees", {
+      const response = await fetch("https://emergentlabs-api.herokuapp.com/api/v1/employees", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -48,7 +48,7 @@ export default createStore({
     },
 
     async fetchEmployees({ commit }) {
-      const response = await fetch("http://localhost:5000/api/v1/employees", {
+      const response = await fetch("https://emergentlabs-api.herokuapp.com/api/v1/employees", {
         method: "GET",
       });
       const data = await response.json();
@@ -56,7 +56,7 @@ export default createStore({
     },
 
     async updateEmployee({ commit }, payload) {
-      await fetch(`http://localhost:5000/api/v1/employees/${payload.id}`, {
+      await fetch(`https://emergentlabs-api.herokuapp.com/api/v1/employees/${payload.id}`, {
         method: "PUT",
       });
       commit("UPDATE_EMPLOYEE", payload);
@@ -64,7 +64,7 @@ export default createStore({
 
     async deleteEmployee({ commit }, payload) {
       commit("DELETE_EMPLOYEE", payload);
-      await fetch(`http://localhost:5000/api/v1/employees/${payload.id}`, {
+      await fetch(`https://emergentlabs-api.herokuapp.com/api/v1/employees/${payload.id}`, {
         method: "DELETE",
       });
     },
