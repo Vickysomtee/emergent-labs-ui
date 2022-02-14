@@ -50,8 +50,8 @@
               <label for="firstName">First Name</label>
               <input type="text" name="firstName" placeholder="Joshua" />
               <svg
-                width="16"
-                height="18"
+                width="20"
+                height="20"
                 viewBox="0 0 16 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +78,8 @@
               <label for="lastName">Last Name</label>
               <input type="text" name="lastName" placeholder="Bakare" />
               <svg
-                width="16"
-                height="18"
+                width="20"
+                height="20"
                 viewBox="0 0 16 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +112,8 @@
               placeholder="josh.bakery@gmail.com"
             />
             <svg
-              width="17"
-              height="17"
+              width="20"
+              height="20"
               viewBox="0 0 17 17"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -141,8 +141,8 @@
             <label for="Password">Password</label>
             <input type="password" name="password" placeholder="***********" />
             <svg
-              width="19"
-              height="15"
+              width="20"
+              height="20"
               viewBox="0 0 19 15"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -224,11 +224,11 @@ main {
   }
 
   .right-section {
-    width: 58%;
+    width: 55%;
 
     .container {
       width: 500px;
-      height: 75%;
+      height: 70%;
       margin: 50px auto;
 
       h1 {
@@ -243,6 +243,7 @@ main {
       }
 
       form {
+        padding: 20px 0;
         margin-top: 30px;
         height: 400px;
         padding: 30px;
@@ -320,7 +321,8 @@ main {
       justify-content: space-between;
       color: #6a7e8a;
       font-size: 10px;
-      padding: 20px;
+      padding: 50px 20px 0;
+      margin: 20px 15px 0;
       div {
         width: 300px;
       }
@@ -342,20 +344,34 @@ main {
         }
 
         h4 {
-          font-size: 15px;
+          font-size: 18px;
         }
 
         form {
-          height: 550px;
+          height: 675px;
           padding: 40px;
+          border-radius: 10px;
 
           label {
-            font-size: 17px;
+            font-size: 20px;
           }
           svg {
             position: relative;
-            left: 340px;
+            left: 338px;
+          bottom: 60px;
+            width: 30px;
+            height: 20px;
           }
+
+          input {
+            padding: 20px 0;
+            margin-bottom: 25px;
+            margin-top: 15px
+          }
+
+          ::placeholder {
+          font-size: 23px;
+        }
 
           .name-input {
             display: block;
@@ -372,24 +388,26 @@ main {
           }
           .btn-main {
             width: 100%;
-            font-size: 18px;
+            font-size: 25px;
             padding: 10px;
-            height: 50px;
+            height: 65px;
+            border-radius: 5px;
+            margin-top: 20px;
           }
         }
       }
       .notice {
-        display: block;
+        display: grid;
         position: relative;
-        left: 100px;
-        top: 200px;
-        width: 300px;
+        left: 60px;
+        top: 300px;
+        width: 450px;
         font-size: 15px;
         div {
           text-align: center;
           padding: 0;
           width: 400px;
-          margin-bottom: 15px;
+          margin-bottom: 13px;
         }
         div:nth-of-type(2) {
           text-align: center;
