@@ -86,6 +86,7 @@ export default createStore({
     },
 
     async deleteEmployee({ commit }, payload) {
+      commit("DELETE_EMPLOYEE", payload);
       await fetch(`https://emergentlabs-api.herokuapp.com/api/v1/employees/${payload.id}`, {
         method: "DELETE",
       });
