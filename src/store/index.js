@@ -4,8 +4,29 @@ export default createStore({
   state: {
     employees: [],
     showModal: false,
+    editEmployee: false,
+    employeeData: {}
   },
   mutations: {
+    changeEditState(state, payload) {
+      // Toggle modal to edit employee
+      state.showModal = !state.showModal;
+
+      //change edit state to true
+      state.editEmployee =!state.editEmployee;
+
+      //Store employee data in state
+      const data = {
+        firstName: payload.firstName,
+        lastName: payload.lastName,
+        email: payload.email,
+        role: payload.role,
+        contact: payload.contact
+      }
+
+      state.employeeData = data
+    },
+
     toggleModal(state) {
       // Toggle modal to add new employee
       state.showModal = !state.showModal;
@@ -22,10 +43,12 @@ export default createStore({
     UPDATE_EMPLOYEE(state, payload) {
       state.employees = state.employees.map((employee) => {
         if (employee.id === payload.id) {
-          employee = payload;
+          employee = {id:employee.id, ...payload};
         }
         return;
       });
+      state.editEmployee = false
+      state.employeeData ={}
     },
 
     DELETE_EMPLOYEE(state, payload) {
@@ -36,7 +59,7 @@ export default createStore({
   },
   actions: {
     async addEmployee({ commit }, payload) {
-      const response = await fetch("http://localhost:5000/api/v1/employees", {
+      const response = await fetch("https://emergentlabs-api.herokuapp.com/api/v1/employees", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -48,7 +71,7 @@ export default createStore({
     },
 
     async fetchEmployees({ commit }) {
-      const response = await fetch("http://localhost:5000/api/v1/employees", {
+      const response = await fetch("https://emergentlabs-api.herokuapp.com/api/v1/employees", {
         method: "GET",
       });
       const data = await response.json();
@@ -56,17 +79,18 @@ export default createStore({
     },
 
     async updateEmployee({ commit }, payload) {
-      await fetch(`http://localhost:5000/api/v1/employees/${payload.id}`, {
+      await fetch(`https://emergentlabs-api.herokuapp.com/api/v1/employees/${payload.id}`, {
         method: "PUT",
       });
       commit("UPDATE_EMPLOYEE", payload);
     },
 
     async deleteEmployee({ commit }, payload) {
-      commit("DELETE_EMPLOYEE", payload);
-      await fetch(`http://localhost:5000/api/v1/employees/${payload.id}`, {
+      await fetch(`https://emergentlabs-api.herokuapp.com/api/v1/employees/${payload.id}`, {
         method: "DELETE",
       });
+      commit("DELETE_EMPLOYEE", payload);
+
     },
   },
   modules: {},

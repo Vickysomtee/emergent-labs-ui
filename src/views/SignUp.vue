@@ -193,21 +193,17 @@ main {
   height: 100vh;
   display: flex;
   color: #013c61;
-
   .left-section {
     width: 42%;
     color: #fff;
     text-align: center;
-
     @media screen and (max-width: 420px) {
       display: none;
     }
-
     img {
       height: 100%;
       width: 100%;
     }
-
     div {
       position: relative;
       bottom: 180px;
@@ -215,33 +211,27 @@ main {
       margin: 0 auto;
       font-size: 19px;
       line-height: 25px;
-
       h3,
       p {
         margin-bottom: 20px;
       }
     }
   }
-
   .right-section {
     width: 55%;
-
     .container {
       width: 500px;
       height: 70%;
       margin: 50px auto;
-
       h1 {
         font-size: 25px;
         font-weight: bold;
         margin-bottom: 20px;
         letter-spacing: 1px;
       }
-
       h4 {
         letter-spacing: 0.5px;
       }
-
       form {
         padding: 20px 0;
         margin-top: 30px;
@@ -269,30 +259,24 @@ main {
           margin-bottom: 25px;
           padding: 20px 0;
         }
-
         ::placeholder {
           color: #013c61;
         }
-
         ::-webkit-input-placeholder {
           color: #013c61;
         }
-
         /* Firefox < 19 */
         :-moz-placeholder {
           color: #013c61;
         }
-
         /* Firefox > 19 */
         ::-moz-placeholder {
           color: #013c61;
         }
-
         /* Internet Explorer 10 */
         :-ms-input-placeholder {
           color: #013c61;
         }
-
         svg {
           position: relative;
           bottom: 50px;
@@ -300,14 +284,11 @@ main {
           width: 15px;
           height: 15px;
         }
-
         .name-input {
           display: flex;
           justify-content: space-between;
-
           div {
             width: 45%;
-
             svg {
               left: 178px;
             }
@@ -330,28 +311,23 @@ main {
         text-align: right;
       }
     }
-
     @media screen and (max-width: 360px) {
       .container {
         width: 550px;
         margin: 30px 10px;
         border-radius: 10px;
         padding: 50px;
-
         h1,
         h4 {
           text-align: center;
         }
-
         h4 {
           font-size: 18px;
         }
-
         form {
           height: 675px;
           padding: 40px;
           border-radius: 10px;
-
           label {
             font-size: 20px;
           }
@@ -362,24 +338,19 @@ main {
             width: 30px;
             height: 20px;
           }
-
           input {
             padding: 20px 0;
             margin-bottom: 25px;
             margin-top: 15px
           }
-
           ::placeholder {
           font-size: 23px;
         }
-
           .name-input {
             display: block;
             justify-content: space-between;
-
             div {
               width: 100%;
-
               svg {
                 position: relative;
                 left: 340px;
@@ -399,7 +370,7 @@ main {
       .notice {
         display: grid;
         position: relative;
-        left: 60px;
+        left: 55px;
         top: 300px;
         width: 450px;
         font-size: 15px;

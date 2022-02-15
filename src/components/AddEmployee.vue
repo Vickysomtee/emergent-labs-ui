@@ -28,11 +28,11 @@ export default {
 
   data() {
     return {
-      firstName: "",
-      lastName: "",
-      email: "",
-      role: "",
-      contact: "",
+      firstName: this.$store.state.employeeData.firstName,
+      lastName: this.$store.state.employeeData.lastName,
+      email: this.$store.state.employeeData.email,
+      role: this.$store.state.employeeData.role,
+      contact: this.$store.state.employeeData.contact,
     };
   },
 
@@ -41,13 +41,14 @@ export default {
       e.preventDefault();
 
       if (
-        !this.firstName &&
-        this.lastName &&
-        this.email &&
-        this.role &&
-        this.contact
+        !this.firstName ||
+        !this.lastName ||
+        !this.email ||
+        !this.role ||
+        !this.contact
       ) {
         alert("All fields are required");
+        return;
       }
 
       const newEmployee = {
@@ -58,8 +59,11 @@ export default {
         contact: this.contact,
       };
 
-      this.$store.dispatch("addEmployee", newEmployee);
-
+      if (this.$store.state.editEmployee) {
+        this.$store.dispatch("updateEmployee", newEmployee);
+      } else {
+        this.$store.dispatch("addEmployee", newEmployee);
+      }
       this.$store.state.showModal = false;
     },
 
