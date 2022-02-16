@@ -329,6 +329,7 @@ main {
 
       .notice {
         display: grid;
+            justify-content: space-around;
         width: 50%;
         text-align: center;
         margin: 0 auto;
@@ -400,7 +401,7 @@ main {
       .notice {
         display: grid;
         position: relative;
-        left: 60px;
+        left: 65px;
         width: 450px;
         font-size: 15px;
         div {
