@@ -332,7 +332,8 @@ main {
         display: grid;
         width: 50%;
         text-align: center;
-            margin: 20px auto 0;
+        padding: 20px 20px 0;
+        margin: 0 auto;
 
         div:nth-of-type(2) {
           text-align: center;
@@ -341,7 +342,7 @@ main {
     }
   }
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 600px) {
     .right-section {
       .container {
         width: 550px;
@@ -405,6 +406,7 @@ main {
         top: 300px;
         width: 450px;
         font-size: 15px;
+        padding: 50px 20px 0;
         div {
           text-align: center;
           padding: 0;
