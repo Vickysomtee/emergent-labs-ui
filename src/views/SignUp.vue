@@ -218,7 +218,6 @@ main {
     width: 55%;
     .container {
       width: 500px;
-      height: 70%;
       margin: 50px auto;
       h1 {
         font-size: 25px;
@@ -299,7 +298,7 @@ main {
       justify-content: space-between;
       color: #6a7e8a;
       font-size: 10px;
-      padding: 50px 20px 0;
+      padding: 10px 20px 0;
       margin: 20px 15px 0;
       div {
         width: 300px;
@@ -332,7 +331,6 @@ main {
         display: grid;
         width: 50%;
         text-align: center;
-        padding: 20px 20px 0;
         margin: 0 auto;
 
         div:nth-of-type(2) {
@@ -402,11 +400,9 @@ main {
       .notice {
         display: grid;
         position: relative;
-        left: 55px;
-        top: 300px;
+        left: 60px;
         width: 450px;
         font-size: 15px;
-        padding: 50px 20px 0;
         div {
           text-align: center;
           padding: 0;
