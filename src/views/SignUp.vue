@@ -197,9 +197,6 @@ main {
     width: 42%;
     color: #fff;
     text-align: center;
-    @media screen and (max-width: 420px) {
-      display: none;
-    }
     img {
       height: 100%;
       width: 100%;
@@ -311,7 +308,41 @@ main {
         text-align: right;
       }
     }
-    @media screen and (max-width: 360px) {
+  }
+
+  @media screen and (max-width: 1000px) {
+    .left-section {
+      display: none;
+    }
+
+    .right-section {
+      width: 100%;
+
+      .container {
+        h1,
+        h4 {
+          text-align: center;
+        }
+        h4 {
+          font-size: 18px;
+        }
+      }
+
+      .notice {
+        display: grid;
+        width: 50%;
+        text-align: center;
+            margin: 20px auto 0;
+
+        div:nth-of-type(2) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .right-section {
       .container {
         width: 550px;
         margin: 30px 10px;
@@ -334,18 +365,18 @@ main {
           svg {
             position: relative;
             left: 338px;
-          bottom: 60px;
+            bottom: 60px;
             width: 30px;
             height: 20px;
           }
           input {
             padding: 20px 0;
             margin-bottom: 25px;
-            margin-top: 15px
+            margin-top: 15px;
           }
           ::placeholder {
-          font-size: 23px;
-        }
+            font-size: 23px;
+          }
           .name-input {
             display: block;
             justify-content: space-between;
